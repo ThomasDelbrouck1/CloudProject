@@ -20,21 +20,15 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
-
-      - name: Build and push Docker image
-        run: |
-         docker build -t ${{ secrets.DOCKER_USERNAME }}/my-php-apache-app:latest .
-         docker push ${{ secrets.DOCKER_USERNAME }}/my-php-apache-app:latest
-
-      - name: Set up QEMU
-        uses: docker/setup-qemu-action@v2
-
       - name: Build and push Docker image
         uses: docker/build-push-action@v3
         with:
           context: .
           push: true
-          tags: rizwanali07/my-php-apache-app:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/my-php-apache-app:latest
+
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v2
 
       - name: Install cosign
         run: |
@@ -42,5 +36,3 @@ jobs:
           curl -Lo cosign https://github.com/sigstore/cosign/releases/download/${COSIGN_VERSION}/cosign-linux-amd64
           chmod +x cosign
           sudo mv cosign /usr/local/bin/cosign
- 
-      
