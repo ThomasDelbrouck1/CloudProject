@@ -1,0 +1,418 @@
+/* Algemene opmaak van de pagina */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    margin-bottom: 100px;
+}
+
+/* Navigatiebalk */
+nav {
+    background-color: #de0b0b;
+    color: #fff;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff; 
+    transition: color 0.3s; 
+}
+
+nav a:hover {
+    color: orangered; 
+}
+
+#logo:hover img {
+    animation: rotate 2s linear infinite;
+}
+
+#logo img {
+    width: 120px; 
+    height: auto; 
+    margin-left: 115rem;
+    margin-top: -3rem;
+    transform-origin: center;
+    
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg); 
+    }
+    100% {
+        transform: rotate(360deg); 
+    }
+}
+/* Hoofdsectie */
+#home {
+    text-align: center;
+    padding: 50px;
+}
+
+#home a:hover{
+    background-color: orangered;
+}
+
+#home h1 {
+    color: #333;
+}
+
+#home a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+/* Featured producten */
+#featured-products {
+    padding: 50px;
+}
+
+#featured-products h2 {
+    color: #333;
+}
+
+/* Over ons sectie */
+#about-us {
+    background-color: #fff;
+    padding: 50px;
+}
+
+#about-us h2 {
+    color: #333;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+}
+
+/* Responsieve stijlen */
+@media screen and (max-width: 600px) {
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    #home {
+        padding: 20px;
+    }
+
+    #featured-products,
+    #about-us {
+        padding: 20px;
+    }
+}
+
+/* Producten sectie */
+#product-list {
+    padding: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+#product-list h2 {
+    color: #333;
+    text-align: center;
+}
+
+.product {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 20px;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 8px;
+    max-width: 300px;
+}
+
+.product img {
+    width: 50%;
+    height: auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.product h3 {
+    color: #333;
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+.product p {
+    color: #666;
+    font-size: 0.9em;
+}
+
+.product span {
+    display: block;
+    color: #333;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.product a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #3498db;
+    font-weight: bold;
+}
+
+
+/* Product detail sectie */
+#product-detail {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#product-detail h2 {
+    color: #333;
+    text-align: center;
+}
+
+#onzephead {
+    padding: 50px;
+}
+
+.product {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    margin: 20px;
+    background-color: #fff;
+    
+
+}
+
+
+.product-details {
+    max-width: 400px;
+}
+
+.product-details p {
+    color: #666;
+}
+
+.product-details span {
+    display: block;
+    color: #333;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Terug naar de shop-knop */
+a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+
+/* Contactformulier sectie */
+#contact-form {
+    padding: 50px;
+    text-align: center;
+}
+
+#contact-form h2 {
+    color: #333;
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-top: 20px;
+    color: #333;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+
+button:hover {
+    background-color: green;
+}
+
+
+.wishlist.selected {
+    background-color: green;
+    color: white;
+}
+
+/* Media query voor schermen kleiner dan 768px (tablet) */
+@media only screen and (max-width: 768px) {
+    nav ul li {
+        margin-right: 10px;
+    }
+
+    #product-list {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    .product {
+        margin: 10px;
+    }
+}
+
+/* Media query voor schermen kleiner dan 480px (mobiel) */
+@media only screen and (max-width: 480px) {
+    nav ul li {
+        margin-right: 5px;
+    }
+
+    #product-list {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+
+    .product {
+        margin: 5px;
+        padding: 10px;
+    }
+
+    #contact-form {
+        padding: 20px;
+    }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+#featured-products {
+    margin: 20px 0;
+}
+
+.product-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+
+#comment-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.customer {
+    width: 200px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    border: 2px solid red;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.customer img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 10px;
+
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid orangered; 
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(255, 69, 0, 0.3); 
+    outline: none; 
+}
+
+.Search{
+    margin-left: 10rem;
+}
+
+.Search:hover{
+    background-color: orangered;
+}
+
+.Search-Home:hover{
+    background-color: orangered;
+}
+
+#shopping-cart {
+    border: 2px solid red; 
+    padding: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+}
+
+#cart-items {
+    list-style: none; 
+    padding: 0;
+}
+
+.cart-item {
+    margin-bottom: 10px; 
+}

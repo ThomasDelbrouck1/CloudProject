@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact</title>
+   
+    
+    <!-- LEAFLET -->
+    <!-- voeg het leaflet css-bestand toe om de kaart van standaard opmaak te voorzien -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/map.css" />
+
+    <!-- voeg de leaflet.js javascript toe aan de pagina en check de integriteit ervan -->
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <!-- voeg het mapScript.js script toe aan de pagina en laad het als de pagina geladen is. -->
+    <script src="js/mapScript.js" defer></script>
+
+</head>
+
+<body>
+    <!-- Navigatiebalk -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="klanten.html">Klanten</a></li>
+            <li id="logo"><img src="assets/logo/Thoma.png" alt="Logo"></li>
+        </ul>
+    </nav>
+   
+    <form class="search-bar">
+        <input type="text" placeholder="Search...">
+        <button class="Search"type="submit">Search</button>
+    </form>
+
+    <!-- Contactformulier sectie -->
+    <section id="contact-form">
+        <h2>Contacteer Ons</h2>
+
+        <form action="#" method="post">
+            <label for="name">Naam:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Bericht:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Verstuur Bericht</button>
+        </form>
+    </section>
+    
+        <div id="Store_Map"></div>
+
+   
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2023 Thomas's hardware. Alle rechten voorbehouden.</p>
+    </footer>
+</body>
+
+</html>
